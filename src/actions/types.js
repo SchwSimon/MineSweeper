@@ -1,0 +1,7 @@
+
+export const RESET_BOARD = 'RESET_BOARD';
+export const BOX_REVEAL = 'BOX_REVEAL';
+export const BOX_FLAG_TOGGLE = 'BOX_FLAG_TOGGLE';
+export const SET_TIME_TICK = 'SET_TIME_TICK';
+export const SUBMIT_SETTINGS = 'SUBMIT_SETTINGS';
+export const TOGGLE_SETTINGS = 'TOGGLE_SETTINGS';

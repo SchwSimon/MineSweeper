@@ -1,0 +1,23 @@
+.SettingsButton {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 40px;
+  color: whitesmoke;
+  cursor: pointer;
+  height: 44px;
+  margin-left: 4px;
+  border: 1px solid whitesmoke;
+  box-sizing: border-box;
+  width: 44px;
+  border-radius: 50%;
+  line-height: 1.1;
+  background-color: transparent;
+  margin-top: 40px;
+  cursor: pointer;
+  user-select: none;
+} .SettingsButton:hover {
+  background-color: #6f6f6f;
+  color: black;
+} .SettingsButton:active {
+  background-color: whitesmoke;
+}

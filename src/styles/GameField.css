@@ -1,0 +1,61 @@
+.MineSweeper-field {
+  position: relative;
+  line-height: 0;
+  margin: 18px auto 0;
+}
+  .MineSweeper-box {
+    display: inline-block;
+    border: 2px outset white;
+    line-height: 1;
+    user-select: none;
+    cursor: pointer;
+    vertical-align: middle;
+    background-color: lightgray;
+  } .MineSweeper-box.active,
+  .MineSweeper-box.revealed {
+    border-style: inset;
+  } .MineSweeper-box.revealed {
+    background-color: #eaeaea;
+  } .MineSweeper-box.revealed.bomb {
+    background-color: #ffafa1;
+    font-weight: bold;
+  } .MineSweeper-box.revealed.bomb.trigger {
+    background-color: red;
+  }
+
+  .MineSweeper-field-blockactions {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.2);
+  }
+    .MineSweeper-field-endtitle {
+      font-size: 90px;
+      display: inline-block;
+      padding-top: 10%;
+      line-height: 1;
+      text-shadow: 1px 1px 1px white;
+      white-space: nowrap;
+    } .MineSweeper-field-endtitle.lose {
+      color: rgba(0,0,0,0.7);
+      animation: loseTitleAnim 2s linear infinite;
+    } .MineSweeper-field-endtitle.win {
+      animation: winTitleAnim 5s linear infinite;
+    } @keyframes loseTitleAnim {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(100%); }
+      100% { transform: translateY(0); }
+    } @keyframes winTitleAnim {
+      0% { color: red; transform: scale(1);}
+      12% { color: yellow; }
+      24% { color: blue; }
+      36% { color: orange; }
+      48% { color: cyan; transform: scale(2);}
+      60% { color: violet; }
+      72% { color: gray; }
+      84% { color: purple; }
+      96% { color: green; }
+      100% { color: red; transform: scale(1);}
+    }
