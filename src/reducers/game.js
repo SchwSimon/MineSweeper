@@ -106,11 +106,11 @@ export default (state = initialState, action) => {
     }
 
     case types.BOX_FLAG_TOGGLE: {
-      const board = state.board.map(row => row.map(col => ({...col})));
-
         // make sure the box is not revealed
-      if (board[action.payload.y][action.payload.x].revealed)
-        break;
+      if (state.board[action.payload.y][action.payload.x].revealed)
+        return state;
+
+      const board = state.board.map(row => row.map(col => ({...col})));
 
       let flagCount = state.flagCount;
       let correctFlags = state.correctFlags;

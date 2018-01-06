@@ -29,9 +29,6 @@ export class GameSettings extends PureComponent {
       floodRevealTimeOffset: 10
     };
 
-      // init a game board with the default settings
-    this.onSubmit();
-
     this.onXMaxChange = this.onXMaxChange.bind(this);
     this.onYMaxChange = this.onYMaxChange.bind(this);
     this.onBombAmountPercentChange = this.onBombAmountPercentChange.bind(this);
@@ -41,21 +38,22 @@ export class GameSettings extends PureComponent {
     this.onSubmit = this.onSubmit.bind(this);
   }
 
+  componentDidMount() {
+      // init a game board with the default settings
+    this.onSubmit();
+  }
+
   onXMaxChange(event) {
     const xMax = event.target.value;
     this.setState(prevState => ({
-      dimension: Object.assign({}, prevState.dimension, {
-        xMax: xMax
-      })
+      dimension: {...prevState.dimension, xMax: xMax*1}
     }));
   }
 
   onYMaxChange(event) {
     const yMax = event.target.value;
     this.setState(prevState => ({
-      dimension: Object.assign({}, prevState.dimension, {
-        yMax: yMax*1
-      })
+      dimension: {...prevState.dimension, yMax: yMax*1}
     }));
   }
 

@@ -4,7 +4,7 @@ import { toggleSettings } from '../actions/actions';
 
 import '../styles/SettingsButton.css';
 
-export class ResetButton extends PureComponent {
+export class SettingsButton extends PureComponent {
   constructor(props) {
     super(props);
 
@@ -25,4 +25,4 @@ export class ResetButton extends PureComponent {
   }
 }
 
-export default connect()(ResetButton);
+export default connect()(SettingsButton);

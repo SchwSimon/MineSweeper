@@ -44,7 +44,7 @@ export class GameTimer extends PureComponent {
     this.props.dispatch(setTimeTick());
 
       // stop the time if the maximum time of 999 seconds is reached
-    if (this.state.time === 999)
+    if (this.state.time >= 999)
       return this.stopTimer();
 
       // set the next timeout

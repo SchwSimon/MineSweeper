@@ -1,11 +1,11 @@
 
 export const spreadBombs = (xMax, yMax, bombCount) => {
-    // prevent an infinite loop
+    // bombcount cannot be bigger than the actual field size
   if (bombCount > xMax*yMax)
     bombCount = xMax*yMax;
 
     // there must be atleast 1 bomb
-  if (!bombCount)
+  if (bombCount < 1)
     bombCount = 1;
 
   const bombs = {};
@@ -47,7 +47,7 @@ export const generateField = (dimension, bombAmount, isFix = false) => {
   const bombData = spreadBombs(
     xMax,
     yMax,
-    (!isFix) ? Math.floor((xMax * yMax) * (bombAmount/100)) : bombAmount
+    (!isFix) ? Math.floor((xMax*yMax) * (bombAmount/100)) : bombAmount
   );
   const bombs = bombData.bombs;
   const bombCount = bombData.bombCount;

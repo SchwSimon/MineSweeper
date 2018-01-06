@@ -27,7 +27,7 @@ export class Box extends Component {
     this.onMouseDown = this.onMouseDown.bind(this);
     this.onMouseUp = this.onMouseUp.bind(this);
     this.onMouseOut = this.onMouseOut.bind(this);
-    this.onLeftClick = this.onLeftClick.bind(this);
+    this.onClick = this.onClick.bind(this);
     this.onRightClick = this.onRightClick.bind(this);
     this.reveal = this.reveal.bind(this);
   }
@@ -111,7 +111,7 @@ export class Box extends Component {
       this.setState({active: false});
   }
 
-  onLeftClick() {
+  onClick() {
       // trigger box reveal if its not revealed or flagged
     if (!this.props.revealed && !this.props.flagged)
       this.onReveal();
@@ -169,7 +169,7 @@ export class Box extends Component {
           height: this.props.boxSize,
           color: HINT_COLORS[(this.props.flagged) ? 0 : this.props.hint]
         }}
-        onClick={this.onLeftClick}
+        onClick={this.onClick}
         onContextMenu={this.onRightClick}
         onMouseEnter={this.onMouseEnter}
         onMouseDown={this.onMouseDown}
