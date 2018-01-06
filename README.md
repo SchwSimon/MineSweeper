@@ -1,6 +1,8 @@
-# Minesweeper
+# Minesweeper   ![Travis Build](https://travis-ci.org/SchwSimon/MineSweeper.svg?branch=master)
 
-Minesweeper game with animated box reveal.
+Minesweeper game build with React + Redux.
 
-- build is currently passing
-- tests are missing (coming soon with TravisCI)
+[Try it Live](https://flushmodules.com/minesweeper/index.html)
+
+- animated box revealing
+- adjustable settings ()
